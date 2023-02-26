@@ -16,8 +16,8 @@ func main() {
 	client := &http.Client{}
 
 	for {
-		updateIp(client, baseUrl, authorization)
-		time.Sleep(5 * time.Minute)
+		updateIp(client, authorization, baseUrl)
+		time.Sleep(30 * time.Minute)
 	}
 }
 
