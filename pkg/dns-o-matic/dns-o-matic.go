@@ -19,7 +19,7 @@ func UpdateIP(user, password string) error {
 	req, err := http.NewRequest(http.MethodGet, url, nil)
 	if err != nil {
 		log.Println("error creating request", err.Error())
-		return nil
+		return err
 	}
 
 	authorization := base64.StdEncoding.EncodeToString([]byte(userPassword))

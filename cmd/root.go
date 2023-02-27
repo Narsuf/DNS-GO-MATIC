@@ -34,7 +34,7 @@ DNS_O_MATIC_LOG_FILE (overriden by flag "--log-file -l")
 If no log file is configured, logs will be written on the default output
 
 To install cronjob:
-(crontab -l 2>/dev/null; echo "* * * * * path/to/dns-o-matic -u user -p password") | crontab -
+(crontab -l 2>/dev/null; echo "*/30 * * * * path/to/dns-o-matic -u user -p password") | crontab -
 
 To uninstall cronjob:
 crontab -l| grep -v "path/to/dns-o-matic" | crontab -
